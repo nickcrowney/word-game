@@ -1,0 +1,18 @@
+.letter-container {
+  height: 60px;
+  width: 60px;
+  background-color: rgb(117, 117, 119);
+  margin: 5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(44, 44, 44);
+  color: whitesmoke;
+}
+
+.letter-box {
+  height: 100%;
+  width: 100%;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+}

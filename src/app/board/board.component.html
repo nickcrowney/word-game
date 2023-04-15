@@ -1,0 +1,35 @@
+<div style="display: flex; flex-direction: column; align-items: center">
+  <button
+    style="
+      width: auto;
+      height: auto;
+      position: relative;
+      top: -20px;
+      font-family: 'Gill Sans', sans-serif;
+      font-size: 40px;
+      color: rgb(209, 0, 209);
+      background-color: rgb(237, 252, 95);
+    "
+    (click)="guess()"
+  >
+    GUESS
+  </button>
+  <div style="display: flex">
+    <!-- {{ value1 }} -->
+    <!-- <span [innerHTML]="value1"></span> -->
+    <div style="display: flex">
+      <div *ngFor="let letter of letters; trackBy: trackByFn">
+        <div class="letter-container" [ngStyle]="letterContainer(letter)">
+          <div
+            id="{{ letter.id }}"
+            class="letter-box"
+            contentEditable="true"
+            (keydown)="onKeydown($event, letter.id)"
+            (input)="onInput($event, letter.id)"
+            [(ngModel)]="value1"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
